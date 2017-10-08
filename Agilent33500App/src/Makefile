@@ -16,10 +16,21 @@ DBD += Agilent33500.dbd
 Agilent33500_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#Agilent33500_DBD += xxx.dbd
+Agilent33500_DBD += caPutLog.dbd
+Agilent33500_DBD += asyn.dbd
+Agilent33500_DBD += stream.dbd
+Agilent33500_DBD += drvAsynIPPort.dbd
+Agilent33500_DBD += drvAsynSerialPort.dbd
+Agilent33500_DBD += system.dbd
+Agilent33500_DBD += asSupport.dbd
+Agilent33500_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
-#Agilent33500_LIBS += xxx
+Agilent33500_LIBS += caPutLog
+Agilent33500_LIBS += stream
+Agilent33500_LIBS += asyn
+Agilent33500_LIBS += devIocStats
+Agilent33500_LIBS += autosave
 
 # Agilent33500_registerRecordDeviceDriver.cpp derives from Agilent33500.dbd
 Agilent33500_SRCS += Agilent33500_registerRecordDeviceDriver.cpp
